@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Young+Serif&display=swap');
+.container{
+	height: 100vh;
+	background-color: #f7dbbd;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.calc{
+	position:relative;
+	height:75vh;
+	width:25vw;
+	max-width:500px;
+	border-radius: 36px;
+	border: 2px solid #888;
+	background: #ffe2e2;
+	box-shadow: -16px 9px 0px -1px #ffbdbd,-16px 9px 0px 1px rgba(136, 136, 136, 0.84);
+	display: flex;
+	flex-direction: column;
+
+}
+
+.calc {
+	// Your existing styles
+  
+	.button {
+		position: relative;
+		height: 8vh;
+		width: 8vh;
+		border-radius: 36px;
+		border: 1px solid #555;
+		background: #fff;
+		box-shadow:  -9px 6px 0px -1px #fff, -9px 6px 0px 0px rgba(75, 75, 75, 0.84);
+  
+	  #but {
+		cursor:default;
+		display:flex;
+		justify-content: center;
+		margin:0;
+		height:7vh;
+		align-items: center;
+		color: #000;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 1.5rem;
+		user-select: none;
+		cursor: pointer;
+		
+	  }
+  
+	  // Specific styles for the button with id "grey"
+	  &.grey {
+		border-radius: 36px;
+		border: 1px solid #5e5e5e;
+		background: #fdebb5		;
+		box-shadow:  -9px 6px 0px -1px #cabb8e,-9px 6px 0px 0px rgba(75, 75, 75, 0.84);
+	  }
+
+	  &.grey:active{
+		box-shadow:  -7px 4px 0px -1px #cabb8e, -7px 4px 0px 0px rgba(75, 75, 75, 0.84);
+	  }
+	  &.orange{
+		border-radius: 36px;
+		border: 1px solid #5E5E5E;
+		background: #ffbe9d;
+		animation:glow 2s infinite;
+		box-shadow:  -9px 6px 0px -1px #d79f82 ,-9px 6px 0px 0px rgba(75, 75, 75, 0.84);
+	  }
+	  &.orange:active{
+		box-shadow: -7px 4px 0px -1px #d79f82, -7px 4px 0px 0px rgba(75, 75, 75, 0.84);
+	  }
+	}
+	.button:active{
+	  transform:translate(-2px,2px);
+	  box-shadow: -7px 4px 0px -1px #fff, -7px 4px 0px 0px rgba(75, 75, 75, 0.84);
+	}
+
+	
+}  
+
+.bigbutton{
+	height:8vh;
+	width:20vh;
+	border-radius: 36px;
+	border: 1px solid #555;
+	background: #FFF;
+	box-shadow: -9px 6px 0px -1px #FFF,-9px 6px 0px 0px rgba(75, 75, 75, 0.84);
+}
+.bigbutton:active{
+	transform:translate(-2px,2px);
+	box-shadow: -7px 4px 0px -1px #fff, -7px 4px 0px 0px rgba(75, 75, 75, 0.84);
+
+}
+#zero{
+	cursor:default;
+	display:flex;
+	justify-content: center;
+	margin:0;
+	height:7.5vh;
+	align-items: center;
+	color: #000;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 2rem;
+	user-select: none;
+	cursor: pointer;
+}
+
+.row{
+	transform:translateY(160px);
+	display:flex;
+	justify-content: center;
+	gap:23px;
+	padding-bottom: 10px;
+}
+.screen{
+    position: absolute;
+    left:6%;
+    top:5%;
+    width:88%;
+    height:17vh;
+    border-radius: 36px;
+    border: 1px solid #888;
+    overflow: hidden;
+    background: #FFF;
+    box-shadow: -9px 6px 0px 0px rgba(136, 136, 136, 0.84), -9px 6px 0px -1px #FFF;
+
+}
+.screen{
+	#screenfont{
+		color: #000;
+		font-family: 'Roboto Mono', monospace;
+		// font-family: 'Young Serif', serif;
+		font-size: 4rem;
+		font-style: normal;
+		line-height: normal;
+		height:17vh;
+		align-items: center;
+		margin:0;
+		display:flex;
+		// justify-content: flex-end;
+		padding-right: 4vh;
+		text-wrap: none;
+		white-space: nowrap;
+		user-select: none;
+		cursor: pointer;
+	}
+}
+
+// @keyframes glow {
+// 	0% {
+// 	  background: #FDB043;
+	  
+// 	}
+// 	50% {
+// 	  background: #fcc87f;
+// 	}
+// 	100% {
+// 	  background: #FDB043;
+	  
+// 	}
+//   }
+
+@media screen and (max-width: 1100px) {
+	.calc {
+	  width: 88vw; /* Adjusted to 90% of the viewport width for smaller screens */
+	}
+	.button {
+	  width: 15%; /* Adjusted width for smaller screens */
+	  height: 6vh; /* Adjusted height for smaller screens */
+	  margin: 0.5vh; /* Adjusted margin for smaller screens */
+	}
+  
+	.bigbutton {
+	  width: 40%; /* Adjusted width for smaller screens */
+	  height: 8vh; /* Adjusted height for smaller screens */
+	  margin: 0.5vh; /* Adjusted margin for smaller screens */
+	}
+  
+	#zero {
+	  height: 7vh; /* Adjusted height for smaller screens */
+	}
+  
+	.row {
+		transform: translateY(205%); /* Adjusted translateY for smaller screens */
+	  	gap: 0.5vh; /* Adjusted gap for smaller screens */
+	}
+  
+	.screen {
+	  width: 92%;
+	}
+}
